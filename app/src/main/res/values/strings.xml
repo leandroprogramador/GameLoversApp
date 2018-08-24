@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">GameLoversApp</string>
+    <string name="app_name">Game Lovers App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="base_url">https://api-endpoint.igdb.com</string>
+    <string name="user_key">5bcb701461efc32d724793f5b2951a2a</string>
+    <string name="nintendo_64">Nintendo 64</string>
+    <string name="playstation_4">Playstation 4</string>
+    <string name="xbox">Xbox One</string>
 </resources>

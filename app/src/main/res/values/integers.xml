@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="nintendo_64_platform">4</integer>
+    <integer name="ps4_platform">48</integer>
+    <integer name="xbox_platform">49</integer>
+    <integer name="nintendo_fragment">0</integer>
+    <integer name="ps4_fragment">1</integer>
+    <integer name="xbox_fragment">2</integer>
+</resources>

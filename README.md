@@ -1,2 +1,2 @@
 # GameLoversApp
-Aplicativo para fãs de games que disponibiliza informações sobre diversos games e plataformas.
+Aplicativo para fãs de game que disponibiliza informações sobre diversos game e plataformas.
