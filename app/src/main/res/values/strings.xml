@@ -8,4 +8,5 @@
     <string name="nintendo_64">Nintendo 64</string>
     <string name="playstation_4">Playstation 4</string>
     <string name="xbox">Xbox One</string>
+    <string name="game_id">game_id</string>
 </resources>

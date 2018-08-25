@@ -9,10 +9,12 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import leandro.com.gameloversapp.R;
+
 public class PicassoHelper {
 
-    public static void getImage(String url, ImageView imageView, int placeholder){
-            if (url != null || url.isEmpty()) {
+    public static void getImage(String url, ImageView imageView){
+            if (url != null ) {
                 Picasso.get().load("http:" + url).into(imageView, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -20,11 +22,11 @@ public class PicassoHelper {
 
                     @Override
                     public void onError(Exception e) {
-                        imageView.setImageResource(placeholder);
+                        imageView.setImageResource(R.drawable.image_error);
                     }
                 });
             } else {
-                imageView.setImageResource(placeholder);
+                imageView.setImageResource(R.drawable.image_error);
             }
 
     }

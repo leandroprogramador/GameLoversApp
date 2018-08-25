@@ -2,7 +2,6 @@ package leandro.com.gameloversapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
-import android.view.View;
 
 import org.junit.Test;
 
@@ -16,6 +15,6 @@ public class MainPresenterTest {
         Context context = InstrumentationRegistry.getTargetContext();
         MainContract.View mView = null;
         MainPresenter mainPresenter = new MainPresenter(mView, context);
-        mainPresenter.getGamesBylatform(0);
+        mainPresenter.getGamesByPlatform(0);
     }
 }

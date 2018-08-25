@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     private void initPresenter() {
         mainPresenter = new MainPresenter(this, MainActivity.this);
-        mainPresenter.getGamesBylatform(NINTENDO_64);
-        mainPresenter.getGamesBylatform(PS4);
-        mainPresenter.getGamesBylatform(XBOX);
+        mainPresenter.getGamesByPlatform(NINTENDO_64);
+        mainPresenter.getGamesByPlatform(PS4);
+        mainPresenter.getGamesByPlatform(XBOX);
 
 
     }

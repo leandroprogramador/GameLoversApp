@@ -17,12 +17,15 @@ import leandro.com.gameloversapp.Utils.PicassoHelper;
 
 public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapter.MainRecyclerViewHolder>{
 
-    public MainRecyclerAdapter(List<Game> gameList) {
-        this.gameList = gameList;
-    }
 
     List<Game> gameList;
-    Context context;
+    IGameClick gameClick;
+
+    public MainRecyclerAdapter(List<Game> gameList, IGameClick gameClick) {
+        this.gameList = gameList;
+        this.gameClick = gameClick;
+    }
+
     @NonNull
     @Override
     public MainRecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,7 +38,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
         Game game = gameList.get(position);
         holder.txtGame.setText(game.getName());
         if(game.getCover()!=null) {
-            PicassoHelper.getImage(game.getCover().getUrl(), holder.imgCover, R.drawable.image_error);
+            PicassoHelper.getImage(game.getCover().getUrl(), holder.imgCover);
         }
     }
 
@@ -45,14 +48,17 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
     }
 
     class MainRecyclerViewHolder extends RecyclerView.ViewHolder{
-
-
         ImageView imgCover;
         TextView txtGame;
         public MainRecyclerViewHolder(View itemView) {
             super(itemView);
             imgCover = itemView.findViewById(R.id.imgCapa);
             txtGame = itemView.findViewById(R.id.txtGame);
+            itemView.setOnClickListener(view -> gameClick.onClick(gameList.get(getLayoutPosition())));
         }
+    }
+
+    public interface IGameClick{
+        void onClick(Game game);
     }
 }

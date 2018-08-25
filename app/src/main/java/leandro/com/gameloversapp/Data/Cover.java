@@ -40,4 +40,8 @@ public class Cover {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public String getBigCover(){
+        return url.replace("thumb", "cover_big");
+    }
 }

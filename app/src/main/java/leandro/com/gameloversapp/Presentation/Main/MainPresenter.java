@@ -31,7 +31,7 @@ public class MainPresenter implements MainContract.Presenter {
 
 
     @Override
-    public List<Game> getGamesBylatform(int platform) {
+    public List<Game> getGamesByPlatform(int platform) {
         mainView.showProgress();
         GameServer.getInstance(mContext).getGameByPlatform(platform, mContext.getString(R.string.user_key), new Callback<List<Game>>() {
             @Override
@@ -42,10 +42,12 @@ public class MainPresenter implements MainContract.Presenter {
 
             @Override
             public void onFailure(Call<List<Game>> call, Throwable t) {
-                mainView.showError("Erro ao recuperar lista de games.");
+                mainView.showError("Cannot get the game list.");
                 mainView.hideProgress();
             }
         });
         return null;
     }
+
+
 }
