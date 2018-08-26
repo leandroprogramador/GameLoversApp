@@ -16,6 +16,6 @@ public interface MainContract {
     }
 
     interface Presenter{
-        List<Game> getGamesByPlatform(int platform);
+       void getGamesByPlatform(int platform);
     }
 }

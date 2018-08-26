@@ -7,6 +7,9 @@ public class Genres {
     int id;
     String name;
 
+    public Genres() {
+    }
+
     public int getId() {
         return id;
     }

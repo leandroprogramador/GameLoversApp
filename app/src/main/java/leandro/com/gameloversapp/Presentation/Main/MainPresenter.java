@@ -31,7 +31,7 @@ public class MainPresenter implements MainContract.Presenter {
 
 
     @Override
-    public List<Game> getGamesByPlatform(int platform) {
+    public void getGamesByPlatform(int platform) {
         mainView.showProgress();
         GameServer.getInstance(mContext).getGameByPlatform(platform, mContext.getString(R.string.user_key), new Callback<List<Game>>() {
             @Override
@@ -46,7 +46,7 @@ public class MainPresenter implements MainContract.Presenter {
                 mainView.hideProgress();
             }
         });
-        return null;
+
     }
 
 

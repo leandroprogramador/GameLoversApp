@@ -14,7 +14,7 @@ public class PicassoTest {
     public void testNullUrl(){
         Context context = InstrumentationRegistry.getTargetContext();
         ImageView imageView = new ImageView(context);
-        PicassoHelper.getImage(null,imageView, R.drawable.image_error);
+        PicassoHelper.getImage(null,imageView);
     }
 
 
